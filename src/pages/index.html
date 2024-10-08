@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="{{ styles }}">
+</head>
+
+<body class="bg-slate-100 pt-12  min-h-screen">
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md w-96 space-y-6">
+        <h1 class="text-4xl font-cal text-center text-slate-800">Todo List</h1>
+
+        <form action="/" method="POST">
+            <div class="space-y-2">
+                <input type="text" name="task" placeholder="Enter a new task" required autocomplete="off"
+                    class="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-slate-800 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                <button type="submit"
+                    class="w-full px-4 py-2 font-cal bg-blue-700 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Add Task
+                </button>
+            </div>
+        </form>
+
+        <ul id="taskList" class="space-y-2">
+            {{ tasks }}
+        </ul>
+        <footer class="w-full h-12 flex justify-center items-center border-t border-slate-200">
+            <p class="text-sm text-slate-600"><a class="underline" href="https://qery.io"
+                    rel="noopener noreferrer">Built with Query</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
